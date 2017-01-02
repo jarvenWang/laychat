@@ -11,7 +11,7 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
-var pgv_pvid = getCookie('pgv_pvid');
+var pgv_pvid = getCookie('PHPSESSID');
 
 var WEB_SOCKET_SWF_LOCATION = "http://i.project.com:999/static/swf/WebSocketMain.swf";
 var WEB_SOCKET_DEBUG = true;
