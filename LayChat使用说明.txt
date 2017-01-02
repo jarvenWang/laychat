@@ -1,0 +1,42 @@
+LayChat目录说明：
+laychat-service为websocket服务，用于发送聊天消息。
+laychat-web为web服务，提供html界面，运行php web程序。
+laychat-web可以用nginx或者apache运行。
+laychat-web目录不依赖任何外部文件。laychat-web目录可以部署在任何服务器。
+vendor目录是workerman框架目录，开发者不用关心，不要改动里面的代码。
+
+安装步骤：
+1、配置ningx或者apache指向laychat-web，或者将laychat-web放入到已有的网站目录中(位置任意，能访问就行)
+2、给laychat-web/static/upload 目录及子目录写权限，用于客户上传图片或者文件。
+3、手动创建数据库，数据库名为laychat，表结构在laychat.sql中
+4、在laychat-web/Config/Db.php下 和laychat-service/Config/Db.php中设置你的数据配置
+5、需要安装pdo_mysql扩展，整个系统不然无法正常使用
+6、安装workerman 参见 http://doc3.workerman.net/install/install.html
+
+linux环境运行
+正式环境终端运行 php start.php start -d 启动。
+如果有问题可以php start.php start启动方便调试。
+浏览器访问laychat-web下的index2.php
+
+
+接入现有系统步骤：
+1、在现有系统的登录逻辑中加入一个session，laychat将使用这个session作为通讯数据
+$_SESSION['laychat'] = array(
+'id'       => $id,      // 用户id
+'username' => $username,// 用户名
+'sign'     => $sign,    // 个性签名
+'avatar'   => $avatar   // 头像
+);
+2、修改laychat-web/init.php中的代码，这个文件用于返回当前登录用户的好友列表和群组，
+目前好友列表是取在线用户加一些随机用户，群组是写死的101作为所有在线用户群组。
+如果你的系统中有好友和群组数据表可以改成使用自己的好友群组数据，在init.php中改即可。
+3、如果你有自己的群组数据，可以在laychat-web/bind.php中找出当前用户的群组，然后利用Gateway::joinGroup加入群组，这样就可以接收群组的消息了
+4、其它文件基本上是通用的，基本上不需要修改。
+5、每个文件都有详细的注释，花半个小时看两遍就熟悉了。
+
+LayIM手册：
+http://www.layui.com/doc/layim.html
+
+workerman手册：
+http://doc3.workerman.net/
+http://workerman.net/gatewaydoc/

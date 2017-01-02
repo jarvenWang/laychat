@@ -1,0 +1,105 @@
+.main-box {
+    width:1000px;
+    margin:80px auto;
+}
+
+.main-box p {
+    font-weight: 300;
+    font-size: 16px;
+    color: #666;
+    line-height: 30px;
+}
+
+.desc {
+    text-align: center;
+}
+
+.desc h2 {
+    line-height: 70px;
+    font-size: 20px;
+    color:#444444;
+    font-weight: bold;
+}
+
+.main-box .content a {
+    padding: 0px;
+    color: #555555;
+    text-decoration: underline;
+}
+
+.main-box a {
+    padding: 0 10px;
+    color: #01AAED;
+}
+
+.qq_login{
+    margin-top:60px;
+}
+
+.logout_icon {
+    margin-right: 10px;
+}
+
+.history-page {
+    text-align: center;
+    line-height: 50px;
+    color: #AAAAAA;
+}
+
+.history-page a {
+    color:#01AAED;
+}
+
+.history-tip {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    box-sizing: content-box;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 140px;
+    margin-right: 0px;
+    margin-top: 25px;
+    background: #EEEEEE;
+    padding: 3px 30px;
+}
+
+.main-box fieldset {
+    display: inline-block;
+    width: 200px;
+    border: none;
+    border-top: 1px solid #B1B1B1;
+    text-align: center;
+    font-size: 18px;
+}
+
+.main-box fieldset legend {
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.auth-box {
+    text-align:left;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.auth-title {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 100px;
+}
+
+.pay-box .item {
+    width: 480px;
+    display: inline-block;
+    text-align: center;
+}
+
+.pay-desc {
+    text-align: center;
+    margin: 30px 0 250px;
+    font-size: 16px;
+}
