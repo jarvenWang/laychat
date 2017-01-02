@@ -13,23 +13,23 @@ function getCookie(name)
 //var allcookies = document.cookie;
 var pgv_pvid = getCookie('PHPSESSID');
 
-var WEB_SOCKET_SWF_LOCATION = "http://i.project.com:999/static/swf/WebSocketMain.swf";
+var WEB_SOCKET_SWF_LOCATION = "http://43.251.231.178:8086/static/swf/WebSocketMain.swf";
 var WEB_SOCKET_DEBUG = true;
 var WEB_SOCKET_SUPPRESS_CROSS_DOMAIN_SWF_ERROR = true;
 
 var laychat = {
     appName           : 'LayChat',
-    initUrl           : 'http://i.project.com:999/init.php?PHPSESSID='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
-    sendMessageUrl    : 'http://i.project.com:999/send_message.php?PHPSESSID='+pgv_pvid, // 发消息接口
-    membersUrl        : 'http://i.project.com:999/members.php?PHPSESSID='+pgv_pvid,
-    uploadImageUrl    : 'http://i.project.com:999/upload_img.php?PHPSESSID='+pgv_pvid,
-    uploadFileUrl     : 'http://i.project.com:999/upload_file.php?PHPSESSID='+pgv_pvid,
-    chatLogUrl        : 'http://i.project.com:999/chat_log.php?PHPSESSID='+pgv_pvid,
-    bindUrl           : 'http://i.project.com:999/bind.php?PHPSESSID='+pgv_pvid,
-    updateSignUrl     : 'http://i.project.com:999/update_sign.php?PHPSESSID='+pgv_pvid,
-    msgBoxUrl         : 'http://i.project.com:999/msg_box.php?PHPSESSID='+pgv_pvid,
-    agreeUrl          : 'http://i.project.com:999/agree.php?PHPSESSID='+pgv_pvid,
-    getNoticeUrl      : 'http://i.project.com:999/get_notice.php?PHPSESSID='+pgv_pvid,
+    initUrl           : 'http://43.251.231.178:8086/init.php?PHPSESSID='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
+    sendMessageUrl    : 'http://43.251.231.178:8086/send_message.php?PHPSESSID='+pgv_pvid, // 发消息接口
+    membersUrl        : 'http://43.251.231.178:8086/members.php?PHPSESSID='+pgv_pvid,
+    uploadImageUrl    : 'http://43.251.231.178:8086/upload_img.php?PHPSESSID='+pgv_pvid,
+    uploadFileUrl     : 'http://43.251.231.178:8086/upload_file.php?PHPSESSID='+pgv_pvid,
+    chatLogUrl        : 'http://43.251.231.178:8086/chat_log.php?PHPSESSID='+pgv_pvid,
+    bindUrl           : 'http://43.251.231.178:8086/bind.php?PHPSESSID='+pgv_pvid,
+    updateSignUrl     : 'http://43.251.231.178:8086/update_sign.php?PHPSESSID='+pgv_pvid,
+    msgBoxUrl         : 'http://43.251.231.178:8086/msg_box.php?PHPSESSID='+pgv_pvid,
+    agreeUrl          : 'http://43.251.231.178:8086/agree.php?PHPSESSID='+pgv_pvid,
+    getNoticeUrl      : 'http://43.251.231.178:8086/get_notice.php?PHPSESSID='+pgv_pvid,
     address           : 'ws://'+document.domain+':8282',
     setMin            : false,
     findUrl           : false,
