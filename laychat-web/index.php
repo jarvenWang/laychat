@@ -20,14 +20,14 @@ $_SESSION['laychat'] = array(
 <head>
     <meta charset="utf-8">
     <title>pangu客服系统</title>
-    <link rel="stylesheet" href="http://i.project.com:999/static/layui/css/layui.css">
-    <link rel="stylesheet" href="http://i.project.com:999/static/css/base.css?v1">
-    <script src="http://i.project.com:999/static/layui/layui.js?v2"></script>
-    <script src="http://i.project.com:999/static/js/json2.js"></script>
-    <script src="http://i.project.com:999/static/js/swfobject.js"></script>
-    <script src="http://i.project.com:999/static/js/web_socket.js"></script>
-    <script src="http://i.project.com:999/static/js/jquery.min.js"></script>
-    <script src="http://i.project.com:999/static/js/laychat.js"></script>
+    <link rel="stylesheet" href="http://43.251.231.178:8086/static/layui/css/layui.css">
+    <link rel="stylesheet" href="http://43.251.231.178:8086/static/css/base.css?v1">
+    <script src="http://43.251.231.178:8086/static/layui/layui.js?v2"></script>
+    <script src="http://43.251.231.178:8086/static/js/json2.js"></script>
+    <script src="http://43.251.231.178:8086/static/js/swfobject.js"></script>
+    <script src="http://43.251.231.178:8086/static/js/web_socket.js"></script>
+    <script src="http://43.251.231.178:8086/static/js/jquery.min.js"></script>
+    <script src="http://43.251.231.178:8086/static/js/laychat.js"></script>
 </head>
 <body>
 
