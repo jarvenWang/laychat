@@ -23,12 +23,8 @@ if (!isset($_SESSION['laychat'])) {
         ));
     }else{
         $cook=$_GET['PHPSESSID'];
-        $_SESSION['laychat']=array(
-            'id'=>$cook,
-            'username'=>$cook,
-            'sign'=>'用户',
-            'avatar'=>'http://www.qqtouxiang.com/d/file/nansheng/2016-12-30/ea31dbefa15cfb3060ad1381455f755f.jpg',
-        );
+        $m_id=$cook;
+        Db::instance('laychat')->update('user')->col('status', 'online')->where('uid=:uid')->bindValue('uid', $m_id)->limit(1)->query();
     }
 
 }
@@ -46,9 +42,6 @@ $mime_info = json_encode($mime_info);
 // 设置当前用户在线
 $db->update('user')->col('status', 'online')->where('uid=:uid')->bindValue('uid', $mime_id)->limit(1)->query();
 
-//if(isset($_GET['PHPSESSID'])){
-//   eixt;
-//}
 // 读取好友列表数据
 $friend_list = $db->query("SELECT `user`.uid as id, `user`.username, `user`.avatar, `user`.sign, `user`.status FROM `friends` LEFT JOIN `user` on `friends`.friend_uid=`user`.uid where friends.uid='$mime_id' order by status asc");
 $friend_list = $friend_list ? $friend_list : array();
@@ -60,9 +53,7 @@ $friend_list = json_encode(array_values($friend_list));
 // 获取该用户加入的群组数据
 $group_list = $db->query("SELECT `group`.gid AS id, `group`.groupname, `group`.avatar FROM `group_members` LEFT JOIN `group` on group_members.gid=`group`.gid WHERE uid='$mime_id'");
 $group_list = $group_list ? json_encode($group_list) : '[]';
-if (isset($_GET['PHPSESSID'])){
-    return false;
-}
+
 ?>
 {
     "code": 0,
