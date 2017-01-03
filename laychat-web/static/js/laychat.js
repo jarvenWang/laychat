@@ -14,7 +14,7 @@ function getCookie(name)
 var pgv_pvid = getCookie('PHPSESSID');
 if(!pgv_pvid){
     var timestamp = (new Date()).valueOf()+Math.random()*9999;
-    $.cookie("PHPSESSID",timestamp);
+    document.cookie="PHPSESSID="+timestamp;
 }
 
 
