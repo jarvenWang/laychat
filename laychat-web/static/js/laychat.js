@@ -12,10 +12,10 @@ function getCookie(name)
 }
 //var allcookies = document.cookie;
 var pgv_pvid = getCookie('PHPSESSID');
-if(!pgv_pvid){
-    var timestamp = (new Date()).valueOf()+Math.random()*9999;
-    document.cookie="PHPSESSID="+timestamp;
-}
+// if(!pgv_pvid){
+//     var timestamp = (new Date()).valueOf()+Math.random()*9999;
+//     document.cookie="PHPSESSID="+timestamp;
+// }
 
 
 var WEB_SOCKET_SWF_LOCATION = "http://43.251.231.178:8086/static/swf/WebSocketMain.swf";
