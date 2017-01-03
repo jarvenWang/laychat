@@ -21,6 +21,14 @@ if (!isset($_SESSION['laychat'])) {
             'code' => 400,
             'msg'  => '请登录'
         ));
+    }else{
+        $cook=$_GET['PHPSESSID'];
+        $_SESSION['laychat']=array(
+            'id'=>$cook,
+            'username'=>$cook,
+            'sign'=>'用户',
+            'avatar'=>'http://www.qqtouxiang.com/d/file/nansheng/2016-12-30/ea31dbefa15cfb3060ad1381455f755f.jpg',
+        );
     }
 
 }
@@ -52,7 +60,9 @@ $friend_list = json_encode(array_values($friend_list));
 // 获取该用户加入的群组数据
 $group_list = $db->query("SELECT `group`.gid AS id, `group`.groupname, `group`.avatar FROM `group_members` LEFT JOIN `group` on group_members.gid=`group`.gid WHERE uid='$mime_id'");
 $group_list = $group_list ? json_encode($group_list) : '[]';
-
+if (isset($_GET['PHPSESSID'])){
+    return false;
+}
 ?>
 {
     "code": 0,
