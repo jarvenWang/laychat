@@ -12,7 +12,10 @@ function getCookie(name)
 }
 //var allcookies = document.cookie;
 //var pgv_pvid = getCookie('PHPSESSID');
-var pgv_pvid = localStorage.ip;
+var pgv_pvid = '';
+if(getCookie('phpIp')){
+    pgv_pvid = getCookie('phpIp');
+}
 
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
