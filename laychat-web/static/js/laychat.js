@@ -12,11 +12,13 @@ function getCookie(name)
 }
 //var allcookies = document.cookie;
 //var pgv_pvid = getCookie('PHPSESSID');
-var pgv_pvid = '';
-if(getCookie('phpIp')){
-    pgv_pvid = getCookie('phpIp');
-}
-alert(pgv_pvid);
+// var pgv_pvid = '';
+// if(getCookie('phpIp')){
+//     pgv_pvid = getCookie('phpIp');
+// }
+// alert(pgv_pvid);
+//localStorage.phpIp = returnCitySN["cip"];
+var pgv_pvid=localStorage.phpIp;
 
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
