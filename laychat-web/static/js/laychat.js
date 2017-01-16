@@ -16,6 +16,7 @@ var pgv_pvid = '';
 if(getCookie('phpIp')){
     pgv_pvid = getCookie('phpIp');
 }
+alert(pgv_pvid);
 
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
