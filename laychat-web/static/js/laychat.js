@@ -11,7 +11,9 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
-var pgv_pvid = getCookie('PHPSESSID');
+//var pgv_pvid = getCookie('PHPSESSID');
+var pgv_pvid = localStorage.ip;
+
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
 //     document.cookie="PHPSESSID="+timestamp;
