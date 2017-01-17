@@ -184,7 +184,7 @@ var laychat = {
 
             //监听发送消息
             layim.on('sendMessage', function(data){
-                console.info(data);
+                console.info(111111);
                 laychat.jq.post(laychat.sendMessageUrl, { data: data} , function(data){
                     if(data.code != 0) {
                         layui.layer.msg(data.msg, {time: 7000});
