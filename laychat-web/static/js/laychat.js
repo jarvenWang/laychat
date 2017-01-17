@@ -11,14 +11,14 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
-//var pgv_pvid = getCookie('PHPSESSID');
+var pgv_pvid = getCookie('PHPSESSID');
 // var pgv_pvid = '';
 // if(getCookie('phpIp')){
 //     pgv_pvid = getCookie('phpIp');
 // }
 // alert(pgv_pvid);
 //localStorage.phpIp = returnCitySN["cip"];
-var pgv_pvid=localStorage.phpIp;
+//var pgv_pvid=localStorage.phpIp;
 
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
@@ -67,7 +67,7 @@ var laychat = {
         };
 
         laychat.socket.onmessage = function(e){
-            // console.info(e);
+            console.info(e);
             var msg = JSON.parse(e.data);
             // 如果layim还没有初始化就收到消息则忽略（init消息除外）
             if(!msg.message_type || (msg.message_type != 'init' && !layui.layim)) return;
@@ -98,10 +98,9 @@ var laychat = {
                             layui.layim.getMessage(msg.data);
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
-                        console.info(msg.data);
-                        // if(laychat.userInfo.id==undefined){
-                        //     laychat.userInfo.id= getCookie('PHPSESSID');
-                        // }
+                        if(laychat.userInfo.id==undefined){
+                            laychat.userInfo.id= getCookie('PHPSESSID');
+                        }
 
                         layui.layim.getMessage(msg.data);
                     }
