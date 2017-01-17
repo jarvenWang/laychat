@@ -2,8 +2,6 @@
  * LayChat云服务
  * laychat.workerman.net
  */
-alert("IP地址："+ILData[0]+"<br />");
-
 function getCookie(name)
 {
     var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
@@ -14,6 +12,7 @@ function getCookie(name)
 }
 //var allcookies = document.cookie;
 var pgv_pvid = getCookie('IpAddress');
+alert(pgv_pvid);
 // var pgv_pvid = '';
 // if(getCookie('phpIp')){
 //     pgv_pvid = getCookie('phpIp');

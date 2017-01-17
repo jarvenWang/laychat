@@ -20,7 +20,6 @@ $_SESSION['laychat'] = array(
 <head>
     <meta charset="utf-8">
     <title>pangu客服系统</title>
-    <script type="text/javascript" src="http://counter.sina.com.cn/ip/" charset="gb2312"></script>
     <link rel="stylesheet" href="http://43.251.231.178:8086/static/layui/css/layui.css">
     <link rel="stylesheet" href="http://43.251.231.178:8086/static/css/base.css?v1">
     <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
