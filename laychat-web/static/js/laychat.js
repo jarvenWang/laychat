@@ -98,13 +98,15 @@ var laychat = {
                         if(msg.data.from_id != laychat.userInfo.id){
                             layui.layim.getMessage(msg.data);
                         }
-                    }else if(laychat.userInfo.id != msg.data.id){
-                        if(laychat.userInfo.id==undefined){
-                            laychat.userInfo.id= getCookie('IpAddress');
-                        }
-
-                        layui.layim.getMessage(msg.data);
-                    }else{
+                    }
+                    // else if(laychat.userInfo.id != msg.data.id){
+                    //     if(laychat.userInfo.id==undefined){
+                    //         laychat.userInfo.id= getCookie('IpAddress');
+                    //     }
+                    //
+                    //     layui.layim.getMessage(msg.data);
+                    // }
+                    else{
                         console.info(msg.data);
                     }
                     return;
