@@ -67,7 +67,8 @@ var laychat = {
         };
 
         laychat.socket.onmessage = function(e){
-            console.info(e);
+            //console.info(e);
+            console.info(laychat.userInfo);
             var msg = JSON.parse(e.data);
             // 如果layim还没有初始化就收到消息则忽略（init消息除外）
             if(!msg.message_type || (msg.message_type != 'init' && !layui.layim)) return;
