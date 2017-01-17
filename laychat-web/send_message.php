@@ -13,7 +13,7 @@ if (!isset($_SESSION['laychat'])) {
     $db = Db::instance('laychat');
 
     $res = $db->query("select * from `user` where uid ='$cook'");
-    //print_r($res);exit;
+    print_r($res);exit;
     $_SESSION['laychat'] = array(
         'id'       => $res[0]['uid'],
         'username' => $res[0]['username'],
