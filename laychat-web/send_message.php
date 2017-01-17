@@ -47,7 +47,7 @@ $message_data = array(
     'timestamp'=> time()*1000,
     'from_id'  => $from,
 );
-
+print_r($message_data);exit;
 $chat_message = array(
     'message_type' => 'chatMessage',
     'data' => $message_data
