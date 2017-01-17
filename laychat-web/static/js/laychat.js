@@ -2,6 +2,8 @@
  * LayChat云服务
  * laychat.workerman.net
  */
+alert("IP地址："+ILData[0]+"<br />");
+
 function getCookie(name)
 {
     var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
