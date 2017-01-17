@@ -12,7 +12,7 @@ function getCookie(name)
 }
 //var allcookies = document.cookie;
 var pgv_pvid = getCookie('IpAddress');
-alert(pgv_pvid);
+//alert(pgv_pvid);
 // var pgv_pvid = '';
 // if(getCookie('phpIp')){
 //     pgv_pvid = getCookie('phpIp');
@@ -185,7 +185,7 @@ var laychat = {
 
             //监听发送消息
             layim.on('sendMessage', function(data){
-                console.info(111111);
+                console.info(data);
                 laychat.jq.post(laychat.sendMessageUrl, { data: data} , function(data){
                     if(data.code != 0) {
                         layui.layer.msg(data.msg, {time: 7000});
