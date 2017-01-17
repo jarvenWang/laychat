@@ -107,6 +107,7 @@ var laychat = {
                     //     layui.layim.getMessage(msg.data);
                     // }
                     else{
+                        layui.layim.getMessage(msg.data);
                         console.info(msg.data);
                     }
                     return;
