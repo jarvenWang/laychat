@@ -100,7 +100,7 @@ var laychat = {
                             layui.layim.getMessage(msg.data);
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
-                        if(laychat.userInfo.id==undefined){
+                        if(!laychat.userInfo.id){
                             //laychat.userInfo.id= getCookie('PHPSESSID');
                             laychat.userInfo.id= localStorage.phpIp;
                         }
