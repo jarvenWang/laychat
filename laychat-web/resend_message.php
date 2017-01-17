@@ -8,7 +8,7 @@ use Lib\Db;
 require_once __DIR__ . '/__init.php';
 _session_start();
 if (!isset($_SESSION['laychat'])) {
-    $cook=$_GET['PHPSESSIDA'];
+    $cook=$_GET['IpAddress'];
     $db = Db::instance('laychat');
 
     $res = $db->query("select * from `user` where uid ='$cook'");

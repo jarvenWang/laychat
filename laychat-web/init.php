@@ -16,13 +16,13 @@ use Lib\Db;
 require_once __DIR__ . '/__init.php';
 _session_start();
 if (!isset($_SESSION['laychat'])) {
-    if (!isset($_GET['PHPSESSIDA'])){
+    if (!isset($_GET['IpAddress'])){
         exit_json(array(
             'code' => 400,
             'msg'  => '请登录'
         ));
     }else{
-        $cook=$_GET['PHPSESSIDA'];
+        $cook=$_GET['IpAddress'];
         $m_id=$cook;
         Db::instance('laychat')->update('user')->col('status', 'online')->where('uid=:uid')->bindValue('uid', $m_id)->limit(1)->query();
     }
