@@ -8,7 +8,7 @@ use Lib\Db;
 require_once __DIR__ . '/__init.php';
 _session_start();
 //{"username":"9563062630","avatar":"http:\/\/www.qqtouxiang.com\/d\/file\/nansheng\/2016-12-30\/ea31dbefa15cfb3060ad1381455f755f.jpg","id":"9563062630","type":"friend","content":"face[\u6655] ","timestamp":1483344589000,"from_id":"9563062630"}
-//if (!isset($_SESSION['laychat'])) {
+if (!isset($_SESSION['laychat'])) {
     $cook=$_GET['IpAddress'];
     $db = Db::instance('laychat');
 
@@ -19,7 +19,7 @@ _session_start();
         'sign'     => $res[0]['sign'],
         'avatar'   => $res[0]['avatar'],
     );
-//}
+}
 if (!isset($_SESSION['laychat'])) {
     exit_json(array(
         'code' => 400,
