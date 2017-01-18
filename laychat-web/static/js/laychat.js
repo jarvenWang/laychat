@@ -90,12 +90,11 @@ var laychat = {
                             layui.layim.getMessage(msg.data);
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
-                        // if(laychat.userInfo.id==undefined){
-                        //     laychat.userInfo.id= getCookie('PHPSESSID');
-                        // }
-                        //
-                        // layui.layim.getMessage(msg.data);
-                        console.info(msg.data);
+                        if(laychat.userInfo.id==undefined){
+                            laychat.userInfo.id= getCookie('PHPSESSID');
+                        }
+
+                        layui.layim.getMessage(msg.data);
                     }
                     return;
                 case 'msgbox':
