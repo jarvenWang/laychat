@@ -11,7 +11,15 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
-var pgv_pvid = getCookie('PHPSESSID');
+var pgv_pvid = getCookie('PHPSESSIDA');
+// var pgv_pvid = '';
+// if(getCookie('phpIp')){
+//     pgv_pvid = getCookie('phpIp');
+// }
+// alert(pgv_pvid);
+//localStorage.phpIp = returnCitySN["cip"];
+//var pgv_pvid=localStorage.phpIp;
+
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
 //     document.cookie="PHPSESSID="+timestamp;
@@ -24,17 +32,17 @@ var WEB_SOCKET_SUPPRESS_CROSS_DOMAIN_SWF_ERROR = true;
 
 var laychat = {
     appName           : 'LayChat',
-    initUrl           : 'http://43.251.231.178:8086/init.php?PHPSESSID='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
-    sendMessageUrl    : 'http://43.251.231.178:8086/send_message.php?PHPSESSID='+pgv_pvid, // 发消息接口
-    membersUrl        : 'http://43.251.231.178:8086/members.php?PHPSESSID='+pgv_pvid,
-    uploadImageUrl    : 'http://43.251.231.178:8086/upload_img.php?PHPSESSID='+pgv_pvid,
-    uploadFileUrl     : 'http://43.251.231.178:8086/upload_file.php?PHPSESSID='+pgv_pvid,
-    chatLogUrl        : 'http://43.251.231.178:8086/chat_log.php?PHPSESSID='+pgv_pvid,
-    bindUrl           : 'http://43.251.231.178:8086/bind.php?PHPSESSID='+pgv_pvid,
-    updateSignUrl     : 'http://43.251.231.178:8086/update_sign.php?PHPSESSID='+pgv_pvid,
-    msgBoxUrl         : 'http://43.251.231.178:8086/msg_box.php?PHPSESSID='+pgv_pvid,
-    agreeUrl          : 'http://43.251.231.178:8086/agree.php?PHPSESSID='+pgv_pvid,
-    getNoticeUrl      : 'http://43.251.231.178:8086/get_notice.php?PHPSESSID='+pgv_pvid,
+    initUrl           : 'http://43.251.231.178:8086/init.php?PHPSESSIDA='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
+    sendMessageUrl    : 'http://43.251.231.178:8086/send_message.php?PHPSESSIDA='+pgv_pvid, // 发消息接口
+    membersUrl        : 'http://43.251.231.178:8086/members.php?PHPSESSIDA='+pgv_pvid,
+    uploadImageUrl    : 'http://43.251.231.178:8086/upload_img.php?PHPSESSIDA='+pgv_pvid,
+    uploadFileUrl     : 'http://43.251.231.178:8086/upload_file.php?PHPSESSIDA='+pgv_pvid,
+    chatLogUrl        : 'http://43.251.231.178:8086/chat_log.php?PHPSESSIDA='+pgv_pvid,
+    bindUrl           : 'http://43.251.231.178:8086/bind.php?PHPSESSIDA='+pgv_pvid,
+    updateSignUrl     : 'http://43.251.231.178:8086/update_sign.php?PHPSESSIDA='+pgv_pvid,
+    msgBoxUrl         : 'http://43.251.231.178:8086/msg_box.php?PHPSESSIDA='+pgv_pvid,
+    agreeUrl          : 'http://43.251.231.178:8086/agree.php?PHPSESSIDA='+pgv_pvid,
+    getNoticeUrl      : 'http://43.251.231.178:8086/get_notice.php?PHPSESSIDA='+pgv_pvid,
     address           : 'ws://'+document.domain+':8282',
     setMin            : false,
     findUrl           : false,
@@ -59,7 +67,7 @@ var laychat = {
         };
 
         laychat.socket.onmessage = function(e){
-            console.info(e);
+            //console.info(e);
             var msg = JSON.parse(e.data);
             // 如果layim还没有初始化就收到消息则忽略（init消息除外）
             if(!msg.message_type || (msg.message_type != 'init' && !layui.layim)) return;
@@ -91,10 +99,12 @@ var laychat = {
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
                         if(laychat.userInfo.id==undefined){
-                            laychat.userInfo.id= getCookie('PHPSESSID');
+                            laychat.userInfo.id= getCookie('PHPSESSIDA');
                         }
 
                         layui.layim.getMessage(msg.data);
+                    }else{
+                        console.info(msg.data);
                     }
                     return;
                 case 'msgbox':
@@ -174,7 +184,7 @@ var laychat = {
 
             //监听发送消息
             layim.on('sendMessage', function(data){
-                console.info(data);
+                console.info(111111);
                 laychat.jq.post(laychat.sendMessageUrl, { data: data} , function(data){
                     if(data.code != 0) {
                         layui.layer.msg(data.msg, {time: 7000});
