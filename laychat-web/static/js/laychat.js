@@ -11,8 +11,7 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
-var pgv_pvid = getCookie('IpAddress');
-//alert(pgv_pvid);
+var pgv_pvid = getCookie('PHPSESSID');
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
 //     document.cookie="PHPSESSID="+timestamp;
@@ -91,8 +90,8 @@ var laychat = {
                             layui.layim.getMessage(msg.data);
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
-                        if(!(laychat.userInfo.id)){
-                            laychat.userInfo.id= getCookie('IpAddress');
+                        if(laychat.userInfo.id==undefined){
+                            laychat.userInfo.id= getCookie('PHPSESSID');
                         }
 
                         layui.layim.getMessage(msg.data);
