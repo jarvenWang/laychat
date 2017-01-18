@@ -1,4 +1,3 @@
-//wjb2
 /**
  * LayChat云服务
  * laychat.workerman.net
