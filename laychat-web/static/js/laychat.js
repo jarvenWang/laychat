@@ -91,9 +91,7 @@ var laychat = {
                             layui.layim.getMessage(msg.data);
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
-                        if(laychat.userInfo.id==undefined){
                             laychat.userInfo.id= getCookie('IpAddress');
-                        }
 
                         layui.layim.getMessage(msg.data);
                     }
