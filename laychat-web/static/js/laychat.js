@@ -12,7 +12,7 @@ function getCookie(name)
 }
 //var allcookies = document.cookie;
 var pgv_pvid = getCookie('IpAddress');
-alert(pgv_pvid);
+//alert(pgv_pvid);
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
 //     document.cookie="PHPSESSID="+timestamp;
@@ -92,7 +92,7 @@ var laychat = {
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
                         if(laychat.userInfo.id==undefined){
-                            laychat.userInfo.id= getCookie('PHPSESSID');
+                            laychat.userInfo.id= getCookie('IpAddress');
                         }
 
                         layui.layim.getMessage(msg.data);
