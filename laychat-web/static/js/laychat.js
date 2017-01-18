@@ -11,7 +11,7 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
-var pgv_pvid = getCookie('IpAddress');
+var pgv_pvid = getCookie('PHPSESSIDA');
 // var pgv_pvid = '';
 // if(getCookie('phpIp')){
 //     pgv_pvid = getCookie('phpIp');
@@ -32,17 +32,17 @@ var WEB_SOCKET_SUPPRESS_CROSS_DOMAIN_SWF_ERROR = true;
 
 var laychat = {
     appName           : 'LayChat',
-    initUrl           : 'http://43.251.231.178:8086/init.php?IpAddress='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
-    sendMessageUrl    : 'http://43.251.231.178:8086/send_message.php?IpAddress='+pgv_pvid, // 发消息接口
-    membersUrl        : 'http://43.251.231.178:8086/members.php?IpAddress='+pgv_pvid,
-    uploadImageUrl    : 'http://43.251.231.178:8086/upload_img.php?IpAddress='+pgv_pvid,
-    uploadFileUrl     : 'http://43.251.231.178:8086/upload_file.php?IpAddress='+pgv_pvid,
-    chatLogUrl        : 'http://43.251.231.178:8086/chat_log.php?IpAddress='+pgv_pvid,
-    bindUrl           : 'http://43.251.231.178:8086/bind.php?IpAddress='+pgv_pvid,
-    updateSignUrl     : 'http://43.251.231.178:8086/update_sign.php?IpAddress='+pgv_pvid,
-    msgBoxUrl         : 'http://43.251.231.178:8086/msg_box.php?IpAddress='+pgv_pvid,
-    agreeUrl          : 'http://43.251.231.178:8086/agree.php?IpAddress='+pgv_pvid,
-    getNoticeUrl      : 'http://43.251.231.178:8086/get_notice.php?IpAddress='+pgv_pvid,
+    initUrl           : 'http://43.251.231.178:8086/init.php?PHPSESSIDA='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
+    sendMessageUrl    : 'http://43.251.231.178:8086/send_message.php?PHPSESSIDA='+pgv_pvid, // 发消息接口
+    membersUrl        : 'http://43.251.231.178:8086/members.php?PHPSESSIDA='+pgv_pvid,
+    uploadImageUrl    : 'http://43.251.231.178:8086/upload_img.php?PHPSESSIDA='+pgv_pvid,
+    uploadFileUrl     : 'http://43.251.231.178:8086/upload_file.php?PHPSESSIDA='+pgv_pvid,
+    chatLogUrl        : 'http://43.251.231.178:8086/chat_log.php?PHPSESSIDA='+pgv_pvid,
+    bindUrl           : 'http://43.251.231.178:8086/bind.php?PHPSESSIDA='+pgv_pvid,
+    updateSignUrl     : 'http://43.251.231.178:8086/update_sign.php?PHPSESSIDA='+pgv_pvid,
+    msgBoxUrl         : 'http://43.251.231.178:8086/msg_box.php?PHPSESSIDA='+pgv_pvid,
+    agreeUrl          : 'http://43.251.231.178:8086/agree.php?PHPSESSIDA='+pgv_pvid,
+    getNoticeUrl      : 'http://43.251.231.178:8086/get_notice.php?PHPSESSIDA='+pgv_pvid,
     address           : 'ws://'+document.domain+':8282',
     setMin            : false,
     findUrl           : false,
@@ -99,7 +99,7 @@ var laychat = {
                         }
                     }else if(laychat.userInfo.id != msg.data.id){
                         if(laychat.userInfo.id==undefined){
-                            laychat.userInfo.id= getCookie('IpAddress');
+                            laychat.userInfo.id= getCookie('PHPSESSIDA');
                         }
 
                         layui.layim.getMessage(msg.data);
