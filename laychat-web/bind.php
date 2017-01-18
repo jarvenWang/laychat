@@ -15,7 +15,7 @@ use Lib\Db;
 require_once __DIR__ . '/__init.php';
 _session_start();
 if(!isset($_SESSION['laychat'])){
-    $cook=$_GET['PHPSESSID'];
+    $cook=$_GET['PHPSESSIDA'];
     $_SESSION['laychat']=array(
         'id'=>$cook,
         'username'=>$cook,
