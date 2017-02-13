@@ -3,6 +3,9 @@
  * 上传文件接口。通用的接口，开发者不用关注
  * 返回数据格式参见 http://www.layui.com/doc/modules/layim.html#uploadFile
  */
+date_default_timezone_set('PRC');
+header('Access-Control-Allow-Origin:*');
+header("Access-Control-Allow-Methods: POST, GET");
 require_once __DIR__ . '/__init.php';
 _session_start();
 if (!isset($_SESSION['laychat'])) {
