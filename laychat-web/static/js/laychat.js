@@ -11,6 +11,8 @@ function getCookie(name)
         return null;
 }
 //var allcookies = document.cookie;
+var local = 'http://43.251.231.178:8086';//http://43.251.231.178:8086
+//var local = 'http://43.251.231.178:8086';//http://i.project.com:999
 var pgv_pvid = getCookie('PHPSESSID');
 // if(!pgv_pvid){
 //     var timestamp = (new Date()).valueOf()+Math.random()*9999;
@@ -18,23 +20,23 @@ var pgv_pvid = getCookie('PHPSESSID');
 // }
 
 
-var WEB_SOCKET_SWF_LOCATION = "http://43.251.231.178:8086/static/swf/WebSocketMain.swf";
+var WEB_SOCKET_SWF_LOCATION = local+"/static/swf/WebSocketMain.swf";
 var WEB_SOCKET_DEBUG = true;
 var WEB_SOCKET_SUPPRESS_CROSS_DOMAIN_SWF_ERROR = true;
 
 var laychat = {
     appName           : 'LayChat',
-    initUrl           : 'http://43.251.231.178:8086/init.php?PHPSESSID='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
-    sendMessageUrl    : 'http://43.251.231.178:8086/send_message.php?PHPSESSID='+pgv_pvid, // 发消息接口
-    membersUrl        : 'http://43.251.231.178:8086/members.php?PHPSESSID='+pgv_pvid,
-    uploadImageUrl    : 'http://43.251.231.178:8086/upload_img.php?PHPSESSID='+pgv_pvid,
-    uploadFileUrl     : 'http://43.251.231.178:8086/upload_file.php?PHPSESSID='+pgv_pvid,
-    chatLogUrl        : 'http://43.251.231.178:8086/chat_log.php?PHPSESSID='+pgv_pvid,
-    bindUrl           : 'http://43.251.231.178:8086/bind.php?PHPSESSID='+pgv_pvid,
-    updateSignUrl     : 'http://43.251.231.178:8086/update_sign.php?PHPSESSID='+pgv_pvid,
-    msgBoxUrl         : 'http://43.251.231.178:8086/msg_box.php?PHPSESSID='+pgv_pvid,
-    agreeUrl          : 'http://43.251.231.178:8086/agree.php?PHPSESSID='+pgv_pvid,
-    getNoticeUrl      : 'http://43.251.231.178:8086/get_notice.php?PHPSESSID='+pgv_pvid,
+    initUrl           : local+'/init.php?PHPSESSID='+pgv_pvid,         // 初始化好友列表和群组接口，这个接口返回个json，格式见
+    sendMessageUrl    : local+'/send_message.php?PHPSESSID='+pgv_pvid, // 发消息接口
+    membersUrl        : local+'/members.php?PHPSESSID='+pgv_pvid,
+    uploadImageUrl    : local+'/upload_img.php?PHPSESSID='+pgv_pvid,
+    uploadFileUrl     : local+'/upload_file.php?PHPSESSID='+pgv_pvid,
+    chatLogUrl        : local+'/chat_log.php?PHPSESSID='+pgv_pvid,
+    bindUrl           : local+'/bind.php?PHPSESSID='+pgv_pvid,
+    updateSignUrl     : local+'/update_sign.php?PHPSESSID='+pgv_pvid,
+    msgBoxUrl         : local+'/msg_box.php?PHPSESSID='+pgv_pvid,
+    agreeUrl          : local+'/agree.php?PHPSESSID='+pgv_pvid,
+    getNoticeUrl      : local+'/get_notice.php?PHPSESSID='+pgv_pvid,
     address           : 'ws://'+document.domain+':8282',
     setMin            : false,
     findUrl           : false,

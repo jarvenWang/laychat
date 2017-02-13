@@ -23,6 +23,7 @@ if (!isset($_SESSION['laychat'])) {
         ));
     }else{
         $cook=$_GET['PHPSESSID'];
+        $cook = str_replace('.','-', $cook);
         $m_id=$cook;
         Db::instance('laychat')->update('user')->col('status', 'online')->where('uid=:uid')->bindValue('uid', $m_id)->limit(1)->query();
     }
