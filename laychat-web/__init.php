@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('PRC');
 header('Access-Control-Allow-Origin:*');
-header("Access-Control-Allow-Methods: POST, GET");
+header("Access-Control-Allow-Methods: POST, GET, OPTIONS,DELETE,PUT");
 // 自动加载相关
 require_once __DIR__ . '/Lib/Autoloader.php';
 // 常用的函数
