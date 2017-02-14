@@ -56,7 +56,7 @@ $scheme = empty($_SERVER['HTTPS']) ? 'http://' : 'https://';
 $url_path = substr($_SERVER['REQUEST_URI'], 0, strrpos($_SERVER['REQUEST_URI'], '/'));
 $url_path = $url_path ? $url_path : '';
 // 文件下载的url路径
-$src = $scheme.$_SERVER['HTTP_HOST'].$url_path.$upload_img_path;
+$src = $scheme.'43.251.231.178:8086'.$url_path.$upload_img_path;
 ?>
 {
     "code": <?php echo $code;?>
