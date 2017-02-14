@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心-游戏记录 </title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+<!--左侧栏-->
+<div class="main-left-side">
+    <div class="main-l-hd">
+        <h1>个人中心</h1>
+
+        <p>CONTROL CENTER</p>
+    </div>
+    <div class="main-l-nav">
+        <ul>
+            <li><a  href="memberCenter.html"><i class="icon-user"></i> <span>会员中心</span> </a></li>
+            <li class="hasLSubNav">
+                <a href="accountManage.html"><i class="icon-money"></i> <span>资金管理 </span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="main-l-nav-active"><i class="icon-transaction"></i> <span>游戏报表</span></a>
+                <div class="main-l-nav-arr"></div>
+            </li>
+            <li><a href="news.html"><i class="icon-message"></i> <span>消息中心 </span></a></li>
+            <li><a href="../commonHtml/404.html"><i class="icon-bonus"></i><span> 我的红利</span></a></li>
+            <li><a href="userInfo.html"><i class="icon-userinfo"></i> <span>帐号信息</span> </a></li>
+            <li><a href="safe.html"><i class="icon-safe"></i> <span>安全中心</span> </a></li>
+        </ul>
+    </div>
+</div>
+
+<!--右侧主内容-->
+<div class="main-right-content">
+    <!--右侧header-->
+    <div class="main-r-hd clearfix"></div>
+    <!--右侧主要内容-->
+    <div class="main-r-bd">
+        <!--充值-->
+        <div class="main-tips"><i class="icon-prompt"></i> 由于各平台数据返回时间延迟，本页只做数据汇总统计，如需查询时时统计或详细下注内容，请进入各平台查看</div>
+        <div class="main-r-box">
+            <div class="sort-bar sort-bar-mar transaction-bar">
+                <form action="" method="get">
+                    <div class="sort-filter clearfix">
+                        <span>日期选择</span>
+                        <input type="text" placeholder="2016.11.05" class="form-control form-date main-form-input" id="datetimepickerFrom">
+                        <span>至</span>
+                        <input type="text" placeholder="2016.11.06" class="form-control form-date main-form-input" id="datetimepickerTo">
+
+                        <div class="filer-button button"><a href="#">查询</a></div>
+                        <span class="sort-single">以下数据每30分钟更新一次</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="transaction-count count-box clearfix">
+            <ul>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico live-ico"><i class="icon-live"></i></div>
+                        <div class="count-info">
+                            <p>真人</p>
+                            <div class="count-info-r clearfix"><span>输赢：</span><span class="num-font">888,788.00</span> </div>
+                            <div class="count-info-r clearfix"><span>流水：</span><span class="num-font">888,788.00</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico sport-ico"><i class="icon-sport"></i></div>
+                        <div class="count-info">
+                            <p>体育</p>
+                            <div class="count-info-r clearfix"><span>输赢：</span><span class="num-font">888,788.00</span> </div>
+                            <div class="count-info-r clearfix"><span>流水：</span><span class="num-font">888,788.00</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico casino-ico"><i class="icon-casino"></i></div>
+                        <div class="count-info">
+                            <p>游戏</p>
+                            <div class="count-info-r clearfix"><span>输赢：</span><span class="num-font">888,788.00</span> </div>
+                            <div class="count-info-r clearfix"><span>流水：</span><span class="num-font">888,788.00</span></div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico lottery-ico"><i class="icon-lottery"></i></div>
+                        <div class="count-info">
+                            <p>彩票</p>
+                            <div class="count-info-r clearfix clearfix"><span>输赢：</span><span class="num-font">888,788.00</span> </div>
+                            <div class="count-info-r clearfix clearfix"><span>流水：</span><span class="num-font">888,788.00</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="transaction-table">
+            <table border="0" cellpadding="0" cellspacing="0" class="bordered border-sports">
+                <thead>
+                <tr>
+                    <th width="40%"><i class="icon-sport"></i> <span>体育平台</span></th>
+                    <th width="20%">注单数量</th>
+                    <th width="20%">下注流水</th>
+                    <th width="20%">输赢况状</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td width="40%">M8体育</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="0" class="bordered border-lottery">
+                <thead>
+                <tr>
+                    <th width="40%"><i class="icon-lottery"></i> <span>彩票平台</span></th>
+                    <th width="20%">注单数量</th>
+                    <th width="20%">下注流水</th>
+                    <th width="20%">输赢况状</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td width="40%">PG彩票</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="0" class="bordered border-casion">
+                <thead>
+                <tr>
+                    <th width="40%"><i class="icon-live"></i> <span>真人娱乐场</span></th>
+                    <th width="20%">注单数量</th>
+                    <th width="20%">下注流水</th>
+                    <th width="20%">输赢况状</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td width="40%">AG娱乐场</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">BBIN娱乐场</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                </tbody>
+            </table>
+            <table border="0" cellpadding="0" cellspacing="0" class="bordered border-slot">
+                <thead>
+                <tr>
+                    <th width="40%"><i class="icon-casino"></i> <span>电子游戏</span></th>
+                    <th width="20%">注单数量</th>
+                    <th width="20%">下注流水</th>
+                    <th width="20%">输赢况状</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td width="40%">PG游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">PT游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">MG游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">AG游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">GD游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">HB游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                <tr>
+                    <td width="40%">BBIN游戏厅</td>
+                    <td width="20%"><span class="num-font"> 100</span></td>
+                    <td width="20%"><span class="num-font"> 1000</span></td>
+                    <td width="20%"><i class="icon-lost"></i> <span class="num-font"> ￥58235.00</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- JavaScript -->
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/userCenterHtml.js"></script>
+<script src="../js/userCenter/transactionDetails.js"></script>
+</body>
+</html>

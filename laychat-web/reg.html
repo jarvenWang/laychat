@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>用户注册</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="libs/layui/css/layui.css">
+    <link rel="stylesheet" href="libs/mCustomScrollbar/jquery.mCustomScrollbar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+<!-- 头部 -->
+<div class="header">
+    <div class="site-nav main-box"></div>
+    <div class="header-content main-box clearfix">
+        <div class="logo">
+            <a href="javascript:void(0)"> </a>
+        </div>
+        <div class="main-nav">
+            <ul>
+                <li class="main-nav-item1 main-nav-item">
+                    <a href="index.html"></a>
+                </li>
+                <li class="main-nav-item2 main-nav-item hasSubNav">
+                    <a href="sport.html"></a>
+                    <div class="sub-nav">
+                        <ul class="sport-category clearfix">
+                            <li class="sport-cate1"><a href="javascript:void(0)" class="openfastTransfer">皇冠体育</a></li>
+                            <li class="sport-cate2"><a href="javascript:void(0)" class="openfastTransfer">BS体育</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="main-nav-item3 main-nav-item hasSubNav">
+                    <a href="live.html"></a>
+                    <div class="sub-nav">
+                        <ul class="live-category clearfix">
+                            <li class="live-cate1"><a href="javascript:void(0)" class="openfastTransfer"></a></li>
+                            <li class="live-cate2"><a href="javascript:void(0)" class="openfastTransfer"></a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="main-nav-item4 main-nav-item"><a href="casino.html"></a></li>
+                <li class="main-nav-item5 main-nav-item"><a href="lottery.html"></a></li>
+                <li class="main-nav-item6 main-nav-item"><a href="preferential.html"></a></li>
+                <li class="main-nav-item7 main-nav-item"><a href="commonHtml/wait.html"></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- 主内容 -->
+<div class=" about-bg">
+        <div class="reg-box clearfix">
+                <div class="about-title"><span>用户注册</span></div>
+            <div class="main-form">
+                <form class="layui-form">
+                    <div class="main-form-item clearfix register-username">
+                        <label class="main-form-label">用户名:</label>
+                        <div class="main-form-item-r">
+                            <input type="text" class="main-form-input" id="reg-username">
+                        </div>
+                        <div class="input-require"></div>
+                        <div class="form-tips">请输入4-12位字母、数字组成的用户名！</div>
+                    </div>
+                    <div class="register-password">
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">密码:</label>
+                            <div class="main-form-item-r">
+                                <input type="password" class="main-form-input" id="reg-password">
+                            </div>
+                            <div class="input-require"></div>
+                            <div class="form-tips">请输入6-20位的字母和数字组合的登录密码！</div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">确认密码:</label>
+                            <div class="main-form-item-r">
+                                <input type="password" class="main-form-input" id="reg-password1">
+                            </div>
+                            <div class="input-require"></div>
+                            <div class="form-tips">请再次输入您的登录密码！</div>
+                        </div>
+                    </div>
+                    <div class="register-pay_password">
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">资金密码:</label>
+                            <div class="main-form-item-r reg-form-item-r">
+                                <input type="password" class="main-form-input" id="reg-pay_password">
+                            </div>
+                            <div class="input-require"></div>
+                            <div class="form-tips">请输入6-20位的数字、字母组合的资金密码！</div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">确认资金密码:</label>
+                            <div class="main-form-item-r reg-form-item-r">
+                                <input type="password" class="main-form-input" id="reg-pay_password1">
+                            </div>
+                            <div class="input-require"></div>
+                            <div class="form-tips">请再次输入您的资金密码！</div>
+                        </div>
+                    </div>
+                    <div class="clearfix register-safe_question">
+                        <div class="layui-form-item main-form-item">
+                            <label class="layui-form-label main-form-label">安全问题:</label>
+                            <div class="layui-input-block main-form-item-r safe-question-select">
+                                <select>
+                                    <option value=""></option>
+                                    <option value="0">安全问题1</option>
+                                    <option value="1">安全问题2</option>
+                                </select>
+                            </div>
+                            <div class="input-require"></div>
+                            <div class="form-tips">请选择密保问题，方便密码找回！</div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">您的答案:</label>
+                            <div class="main-form-item-r">
+                                <input type="text" class="main-form-input main-form-input2" id="reg-answer">
+                            </div>
+                            <div class="input-require"></div>
+                            <div class="form-tips">请输入您的答案！</div>
+                        </div>
+                    </div>
+                    <div class="main-form-item clearfix register-name">
+                        <label class="main-form-label">姓名:</label>
+                        <div class="main-form-item-r reg-form-item-r">
+                            <input type="text" class="main-form-input" id="reg-name">
+                        </div>
+                        <div class="input-require"></div>
+                        <div class="form-tips">请输入真实姓名！</div>
+                    </div>
+                    <div class="main-form-item clearfix register-mobile">
+                        <label class="main-form-label">手机:</label>
+                        <div class="main-form-item-r reg-form-item-r">
+                            <input type="text" class="main-form-input" id="reg-mobile">
+                        </div>
+                        <div class="input-require"></div>
+                        <div class="form-tips">请输入手机号！</div>
+                    </div>
+                    <div class="main-form-item clearfix register-email">
+                        <label class="main-form-label">邮箱:</label>
+                        <div class="main-form-item-r reg-form-item-r">
+                            <input type="text" class="main-form-input" id="reg-email">
+                        </div>
+                        <div class="input-require"></div>
+                        <div class="form-tips">请输入常用邮箱！</div>
+                    </div>
+                    <div class="main-form-item clearfix register-address">
+                        <label class="main-form-label">地址:</label>
+                        <div class="main-form-item-r reg-form-item-r">
+                            <input type="text" class="main-form-input" id="reg-address">
+                        </div>
+                        <div class="input-require"></div>
+                        <div class="form-tips">请输入居住地址！</div>
+                    </div>
+                    <div class="main-form-item clearfix register-code">
+                        <label class="main-form-label">验证码:</label>
+                        <div class="main-form-item-r reg-form-item-r">
+                            <input type="text" class="main-form-input" id="reg-code">
+                            <div class="client-code"></div>
+                        </div>
+                        <div class="input-require"></div>
+                        <div class="form-tips">请输入验证码！</div>
+                    </div>
+                </form>
+                <div class="form-item-err"></div>
+                <div class="button form-button"><a href="javascript:void(0)" id="register">立即注册</a></div>
+                <div class="reg-tips">	点击”立即注册“，即表示您同意并愿意遵守《盘古娱乐城》<a href="javascript:void(0)" id="user-agreement-open">用户协议和隐私条款</a> </div>
+            </div>
+        </div>
+</div>
+
+<!-- 底部 -->
+<div class="footer"></div>
+
+<!--用户协议和隐私条款-->
+<div id="user-agreement" style="display: none;">
+    <div class="content">盘古线上娱乐城 完整的游戏组合，给您最专业的服务！ 盘古娱乐城，提供给广大的会员包含 体育赛事、电子游戏、棋牌、彩票及真人视讯；
+        完整的服务是盘古娱乐城给广 大会员的专业表现；我们希望您能造访盘古网站并给予我们珍贵的意见；我们随时欢迎您的莅临！</div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/layui/layui.js"></script>
+<script src="libs/swfobject.js"></script>
+<script src="libs/web_socket.js"></script>
+<script src="libs/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="libs/moment-with-locales.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/laychat.js"></script>
+<script src="js/mainHtml.js"></script>
+<script src="js/main/reg.js"></script>
+</body>
+</html>

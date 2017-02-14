@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心-资金明细</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+
+<!--左侧栏-->
+<div class="main-left-side">
+    <div class="main-l-hd">
+        <h1>个人中心</h1>
+
+        <p>CONTROL CENTER</p>
+    </div>
+    <div class="main-l-nav">
+        <ul>
+            <li>
+                <a href="memberCenter.html"><i class="icon-user"></i> <span>会员中心</span> </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="main-l-nav-active hasLSubNav"><i class="icon-money"></i> <span>资金管理 </span></a>
+                <div class="main-l-nav-arr"></div>
+            </li>
+            <li><a href="transactionDetails.html"><i class="icon-transaction"></i> <span>游戏报表</span></a></li>
+            <li><a href="news.html"><i class="icon-message"></i> <span>消息中心 </span></a></li>
+            <li><a href="../commonHtml/404.html"><i class="icon-bonus"></i><span> 我的红利</span></a></li>
+            <li><a href="userInfo.html"><i class="icon-userinfo"></i> <span>帐号信息</span> </a></li>
+            <li><a href="safe.html"><i class="icon-safe"></i> <span>安全中心</span> </a></li>
+        </ul>
+    </div>
+</div>
+
+<!--右侧主内容-->
+<div class="main-right-content">
+    <!--右侧header-->
+    <div class="main-r-hd clearfix"></div>
+    <!--右侧主要内容-->
+    <div class="main-r-bd">
+        <div class="main-r-box">
+            <div class="main-tab account-tab">
+                <ul class="clearfix">
+                    <!--<li class="main-tab-active"><a href="javascript:void(0)">充值</a></li>-->
+                    <li><a href="javascript:void(0)">充值</a></li>
+                    <li><a href="javascript:void(0)">提现</a></li>
+                    <li><a href="javascript:void(0)">账户明细</a></li>
+                </ul>
+            </div>
+            <!--充值-->
+            <div class="account-content recharge-content" style="display: none">
+                <div class="main-sub-tab">
+                    <ul class="clearfix recharge-tab">
+                        <li>
+                            <div class="main-sub-tab-active">
+                                <a href="javascript:void(0)"><i class="icon-money"></i><span>在线支付</span></a>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="javascript:void(0)"><i class="icon-quickpay"></i><span>转账汇款</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="main-form recharge-message-form">
+                    <div class="main-form-item clearfix">
+                        <label class="main-form-label">优惠活动:</label>
+                        <ul class="main-form-item-r">
+                            &lt;!&ndash;<li><i class="icon-checked"></i><span>新会员优惠活动，充值500送200元 ，截止时间2017年1月31日</span></li>&ndash;&gt;
+                            &lt;!&ndash;<li><i class="icon-check"></i><span>当日充值优惠活动，充值200送20元 ，充值1000送200元，充值5000送1500元，充值10000送3000元，截止时间2017年1月31日</span></li>&ndash;&gt;
+                            &lt;!&ndash;<li><i class="icon-check"></i><span>不参与活动</span></li>&ndash;&gt;
+                        </ul>
+                    </div>
+                </div>-->
+                <div class="main-form recharge-form online-pay">
+                    <div class="main-form-item clearfix">
+                        <label class="main-form-label">支付类型:</label>
+                        <div class="main-form-item-r recharge-type-choose">
+                            <div class="recharge-type-input">
+                                <input type="text" class="main-form-input" id="recharge-type1" placeholder="- 请选择支付类型 -">
+                                <i class="icon-down"></i>
+                                <div class="recharge-types clearfix">
+                                    <ul class="other-type-box clearfix">
+                                        <li><span class="other-type weixin">微信支付</span></li>
+                                        <li><span class="other-type zhifubao">支付宝支付</span></li>
+                                    </ul>
+                                    <ul class="bank-box clearfix">
+                                        <li><span class="bank ABC">农业银行</span></li>
+                                        <li><span class="bank BJBANK">北京银行</span></li>
+                                        <li><span class="bank COMM">交通银行</span></li>
+                                        <li><span class="bank SHBANK">上海银行</span></li>
+                                        <li><span class="bank BOC">中国银行</span></li>
+                                        <li><span class="bank CCB">建设银行</span></li>
+                                        <li><span class="bank CEB">光大银行</span></li>
+                                        <li><span class="bank CIB">兴业银行</span></li>
+                                        <li><span class="bank CMBC">民生银行</span></li>
+                                        <li><span class="bank CMB">招商银行</span></li>
+                                        <li><span class="bank CITIC">中信银行</span></li>
+                                        <li><span class="bank GDB">广东发展</span></li>
+                                        <li><span class="bank HXBANK">华夏银行</span></li>
+                                        <li><span class="bank ICBC">中国工商银行</span></li>
+                                        <li><span class="bank PSBC">中国邮政</span></li>
+                                        <li><span class="bank SRCB">上海农商</span></li>
+                                        <li><span class="bank SPDB">浦东发展</span></li>
+                                        <li><span class="bank SPABANK">平安银行</span></li>
+                                        <li><span class="bank BJRCB">北京农商</span></li>
+                                        <li><span class="bank yinlian">银联无卡支付</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-tips" style="display: none;"> 单笔充值金额最低 <em class="min-pay"></em> 元，最高 <em class="max-pay"></em> 元，您今日还能充值 <em>5</em> 笔。请在 <em>15</em> 分钟内完成充值</div>
+                        </div>
+                    </div>
+                    <!--<div class="main-form-item main-form-subItem clearfix" style="display: none;">
+                        <label class="main-form-label" style="text-indent: -99999px;">财付通详情：</label>
+                        <div class="main-form-item-r type-detail-box caifutong-detail-box">
+                            <p><span>收款人姓名:</span><span>王强</span> <i class="copy" id="copy1" data-clipboard-text="王强">复制</i></p>
+                            <p><span>财付通账号:</span><span>4564565456</span> <i class="copy" id="copy2" data-clipboard-text="4564565456">复制</i></p>
+                        </div>
+                    </div>-->
+                    <div class="main-form-item recharge-message-form clearfix">
+                        <label class="main-form-label">优惠活动:</label>
+                        <ul class="main-form-item-r">
+                            <!--<li><i class="icon-checked"></i><span>新会员优惠活动，充值500送200元 ，截止时间2017年1月31日</span></li>-->
+                            <!--<li><i class="icon-check"></i><span>当日充值优惠活动，充值200送20元 ，充值1000送200元，充值5000送1500元，充值10000送3000元，截止时间2017年1月31日</span></li>-->
+                            <!--<li><i class="icon-check"></i><span>不参与活动</span></li>-->
+                        </ul>
+                    </div>
+                    <div class="main-form-item clearfix">
+                        <label class="main-form-label">充值金额:</label>
+                        <div class="main-form-item-r amount-input">
+                            <input type="text" class="main-form-input" id="recharge-accout1" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                            <i>￥</i>
+                        </div>
+                        <div class="form-tips form-tips-right">送 <em>200</em> 元</div>
+                    </div>
+                    <div class="button form-button"><a href="javascript:void(0)" id="onlinePay-recharge">去支付</a></div>
+                </div>
+                <div class="main-form recharge-form transfer-accounts">
+                    <div class="main-form-item clearfix">
+                        <label class="main-form-label">选择类型:</label>
+                        <div class="main-form-item-r recharge-type-choose">
+                            <div class="recharge-type-input">
+                                <input type="text" class="main-form-input" id="recharge-type2" placeholder="- 请选择支付类型 -">
+                                <i class="icon-down"></i>
+                                <div class="recharge-types clearfix">
+                                    <ul class="bank-box clearfix">
+                                        <!--<li><span class="bank ABC">农业银行</span></li>
+                                        <li><span class="bank BJBANK">北京银行</span></li>
+                                        <li><span class="bank COMM">交通银行</span></li>
+                                        <li><span class="bank SHBANK">上海银行</span></li>
+                                        <li><span class="bank BOC">中国银行</span></li>
+                                        <li><span class="bank CCB">建设银行</span></li>
+                                        <li><span class="bank CEB">光大银行</span></li>
+                                        <li><span class="bank CIB">兴业银行</span></li>
+                                        <li><span class="bank CMBC">民生银行</span></li>
+                                        <li><span class="bank CMB">招商银行</span></li>
+                                        <li><span class="bank CITIC">中信银行</span></li>
+                                        <li><span class="bank GDB">广东发展</span></li>
+                                        <li><span class="bank HXBANK">华夏银行</span></li>
+                                        <li><span class="bank ICBC">中国工商银行</span></li>
+                                        <li><span class="bank PSBC">中国邮政</span></li>
+                                        <li><span class="bank SRCB">上海农商</span></li>
+                                        <li><span class="bank SPDB">浦东发展</span></li>
+                                        <li><span class="bank SPABANK">平安银行</span></li>
+                                        <li><span class="bank BJRCB">北京农商</span></li>
+                                        <li><span class="bank yinlian">银联无卡支付</span></li>-->
+                                    </ul>
+                                    <ul class="other-type-box clearfix">
+                                        <li><span class="other-type weixin">微信支付</span></li>
+                                        <li><span class="other-type zhifubao">支付宝支付</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form-tips" style="display: none;"> 单笔充值金额最低 <em class="min-pay"></em> 元，最高 <em class="max-pay"></em> 元，您今日还能充值 <em>5</em> 笔。请在 <em>15</em> 分钟内完成充值</div>
+                        </div>
+                    </div>
+                    <div class="transfer-accounts-bank" style="display: none;">
+                        <div class="main-form-item main-form-subItem clearfix">
+                            <label class="main-form-label" style="text-indent: -99999px;">支付方式详情：</label>
+                            <div class="main-form-item-r type-detail-box bank-detail-box">
+                                <div class="fl">
+                                    <p><span>收款银行：</span> <span></span>  <i class="copy" id="copy3" data-clipboard-text="">复制</i></p>
+
+                                    <p><span>收款账户名：</span> <span></span>  <i class="copy" id="copy4" data-clipboard-text="">复制</i></p>
+
+                                    <p><span>收款账号：</span> <span></span>  <i class="copy" id="copy5" data-clipboard-text="">复制</i></p>
+
+                                    <p><span>开户银行：</span> <span></span>  <i class="copy" id="copy6" data-clipboard-text="">复制</i></p>
+
+                                    <p><span>附言或备注：</span> <span></span>  <i class="copy" id="copy7" data-clipboard-text="">复制</i></p>
+                                </div>
+                                <div class="fr">
+                                    <p>汇款说明：</p>
+                                    <p>1.  请在汇款后15分钟内提交下面账户名和金额等信息 <br>
+
+                                        2.  务必将“附言或备注”的文字填写到银行汇款页面的“附言”或“备注”中，不填写会影响充值到账 <br>
+
+                                        3.“附言或备注”为随机生成，一个附言只能充值一次，重复使用充值将无法到账 <br>
+
+                                        4.  收款账户名和账号会不定期更换，请务必确认该页信息是否和网银填写一致，否则充值将无法到账
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-form-item recharge-message-form clearfix">
+                            <label class="main-form-label">优惠活动:</label>
+                            <ul class="main-form-item-r">
+                                <!--<li><i class="icon-checked"></i><span>新会员优惠活动，充值500送200元 ，截止时间2017年1月31日</span></li>-->
+                                <!--<li><i class="icon-check"></i><span>当日充值优惠活动，充值200送20元 ，充值1000送200元，充值5000送1500元，充值10000送3000元，截止时间2017年1月31日</span></li>-->
+                                <!--<li><i class="icon-check"></i><span>不参与活动</span></li>-->
+                            </ul>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">汇款账户名:</label>
+                            <div class="main-form-item-r">
+                                <input type="text" class="main-form-input" id="recharge-name2" placeholder="请填写银行卡姓名">
+                            </div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">汇款金额:</label>
+                            <div class="main-form-item-r amount-input">
+                                <input type="text" class="main-form-input"  id="recharge-accout2" placeholder="请填写实际汇款金额" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                                <i>￥</i>
+                            </div>
+                            <div class="form-tips form-tips-right">送 <em>200</em> 元</div>
+                        </div>
+                        <div class="button form-button"><a href="javascript:void(0)" id="transfer-accounts-recharge">已汇款，确认提交</a></div>
+                    </div>
+                    <div class="transfer-accounts-weixin" style="display: none;">
+                        <div class="main-form-item recharge-message-form clearfix">
+                            <label class="main-form-label">优惠活动:</label>
+                            <ul class="main-form-item-r">
+                                <!--<li><i class="icon-checked"></i><span>新会员优惠活动，充值500送200元 ，截止时间2017年1月31日</span></li>-->
+                                <!--<li><i class="icon-check"></i><span>当日充值优惠活动，充值200送20元 ，充值1000送200元，充值5000送1500元，充值10000送3000元，截止时间2017年1月31日</span></li>-->
+                                <!--<li><i class="icon-check"></i><span>不参与活动</span></li>-->
+                            </ul>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">汇款金额:</label>
+                            <div class="main-form-item-r amount-input">
+                                <input type="text" class="main-form-input" id="recharge-accout2-wx" placeholder="请填写实际汇款金额" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                                <i>￥</i>
+                            </div>
+                            <div class="form-tips form-tips-right">送 <em>200</em> 元</div>
+                        </div>
+                        <div class="weixin-step1">
+                            <div class="button form-button"><a href="javascript:void(0)" id="transfer-accounts-weixin1">生成二维码汇款</a></div>
+                        </div>
+                        <div class="weixin-step2" style="display: none;">
+                            <div class="main-form-item main-form-subItem clearfix">
+                                <label class="main-form-label" style="text-indent: -99999px;">支付方式详情：</label>
+                                <div class="main-form-item-r type-detail-box weixin-detail-box">
+                                    <div class="fl">
+                                        <p></p>
+                                        <div id="erweima-box">
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="fr">
+                                        <div id="recharge-amount-down"></div>
+                                        <p class="form-tips">
+                                            为保障充值成功，请在 <em>5</em> 分钟内完成汇款，之后点击下面的确认提交
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button form-button"><a href="javascript:void(0)" id="transfer-accounts-weixin2">已汇款，确认提交</a></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--提现-->
+            <div class="account-content" style="display: none">
+                <div class="main-form-tips"><i class="icon-prompt"></i> 为了您的资金安全，请确保您的手机处于开机状态，便于盘古的客服人员致电确认！</div>
+                <div class="main-form withdraw-form">
+                    <form>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">可提金额:</label>
+
+                            <div class="main-form-item-r"><span class="main-form-lighttext user-balance"></span></div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">收款帐号:</label>
+
+                            <div class="main-form-item-r">
+                                <div class="bank-list">
+                                    <ul>
+                                        <li class="clearfix bank-checked">
+                                            <label for="bank1">
+                                                <input type="radio" name="bankChoose" class="bank-radio" checked="true" id="bank1">
+
+                                                <div class="bank-card"><i class="icon-bank1"></i>招商银行 <span>尾号：9876</span></div>
+                                            </label>
+                                            <div class="bank-edit"><a href="#">设为默认</a><a href="javascript:void(0)" class="sure-delete-bank">删除</a></div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <label for="bank2">
+                                                <input type="radio" name="bankChoose" class="bank-radio" id="bank2">
+
+                                                <div class="bank-card"><i class="icon-bank1"></i>招商银行 <span>尾号：9876</span></div>
+                                            </label>
+                                            <div class="bank-edit"><a href="#">设为默认</a><a href="javascript:void(0)" class="sure-delete-bank">删除</a></div>
+                                        </li>
+                                        <li class="clearfix">
+                                            <label for="bank3">
+                                                <input type="radio" name="bankChoose" class="bank-radio" id="bank3">
+
+                                                <div class="bank-card"><i class="icon-bank1"></i>招商银行 <span>尾号：9876</span></div>
+                                            </label>
+                                            <div class="bank-edit"><a href="#">设为默认</a><a href="javascript:void(0)" class="sure-delete-bank">删除</a></div>
+                                        </li>
+                                    </ul>
+                                    <div class="add-bank-card">
+                                        <i class="icon-quickpay"></i>
+                                        <a  id="add-bank-open" href="javascript:void(0)">添加银行卡</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">提现金额:</label>
+
+                            <div class="main-form-item-r amount-input">
+                                <input type="text" class="main-form-input" name="account" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                                <i>￥</i>
+                            </div>
+                        </div>
+                        <div class="main-form-item clearfix">
+                            <label class="main-form-label">资金密码:</label>
+
+                            <div class="main-form-item-r amount-input">
+                                <input type="password" class="main-form-input" name="payword">
+                            </div>
+                        </div>
+                        <div class="button form-button"><a href="javascript:void(0)" id="withdraw-apply">提交申请</a></div>
+                    </form>
+                </div>
+                <div class="withdraw-wait">
+                    <div class="main-form-state clearfix">
+                        <i class="icon-wait"></i><span>提现申请已提交，等待银行处理</span>
+                    </div>
+                    <div class="main-form-state-tips">
+                        如果银行信息填写有误导致提现失败，资金将自动返还到您的个人账户！<br>
+                        <a href="">继续提现</a><a href="#">查看提现记录</a>
+                    </div>
+                </div>
+            </div>
+            <!--账户明细-->
+            <div class="account-content" style="display: none">
+                <div class="account-count clearfix">
+                    <ul>
+                        <li>
+                            <div class="account-cate">入款总计</div>
+                            <div class="account-money num-font">10000.00</div>
+                        </li>
+                        <li>
+                            <div class="account-cate">出款总计</div>
+                            <div class="account-money num-font">10000.00</div>
+                        </li>
+                        <li>
+                            <div class="account-cate">红利总计</div>
+                            <div class="account-money num-font">10000.00</div>
+                        </li>
+                        <li>
+                            <div class="account-cate">返水总计</div>
+                            <div class="account-money num-font">10000.00</div>
+                        </li>
+                        <li>
+                            <div class="account-cate">转账总计</div>
+                            <div class="account-money num-font">10000.00</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sort-bar">
+                    <form action="" method="get">
+                        <div class="sort-filter clearfix">
+                            <span>日期选择</span>
+                            <input type="text" placeholder="2016.11.05" class="form-control form-date main-form-input" id="datetimepickerFrom">
+                            <span>至</span>
+                            <input type="text" placeholder="2016.11.06" class="form-control form-date main-form-input" id="datetimepickerTo">
+                            <div class="filer-button button"><a href="#">查询</a></div>
+                            <span class="sort-single">按单号查询</span>
+                            <input type="text" placeholder="请输入单号" class="form-control form-date main-form-input">
+                            <div class="filer-button button"><a href="#">查询</a></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="m-table">
+                    <table border="0" cellpadding="0" cellspacing="0" class="tbl-main">
+                        <thead>
+                        <tr><th>订单编号 </th>
+                            <th class="show-drop-list">
+                                <a href="javascript:void(0)">
+                                    <span class="drop-select">全部</span><i class="icon-down2"></i>
+                                </a>
+                                <div class="drop-list">
+                                    <div class="arrow-up"></div>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">全部</a> </li>
+                                        <li><a href="javascript:void(0)">入款</a> </li>
+                                        <li><a href="javascript:void(0)">出款</a> </li>
+                                        <li><a href="javascript:void(0)">红利</a> </li>
+                                        <li><a href="javascript:void(0)">返水</a> </li>
+                                        <li><a href="javascript:void(0)">转账</a> </li>
+                                    </ul>
+                                </div>
+                            </th>
+                            <th>金额</th>
+                            <th class="show-drop-list">
+                                <a href="javascript:void(0)">
+                                    <span class="drop-select">全部</span><i class="icon-down2"></i>
+                                </a>
+                                <div class="drop-list">
+                                    <div class="arrow-up"></div>
+                                    <ul>
+                                        <li><a href="javascript:void(0)">全部</a> </li>
+                                        <li><a href="javascript:void(0)">成功</a> </li>
+                                        <li><a href="javascript:void(0)">失败</a> </li>
+                                        <li><a href="javascript:void(0)">处理中</a></li>
+                                    </ul>
+                                </div>
+                            </th>
+                            <th>变动说明</th>
+                            <th>处理日期</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state account-count-state3"> 处理中</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state account-count-state2"> 失败</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        <tr>
+                            <td>130090151100100</td>
+                            <td>转账</td>
+                            <td>100.00</td>
+                            <td><span class="account-count-state"> 成功</span></td>
+                            <td>中心钱包 转入 盘古娱乐场</td>
+                            <td>2016-02-29</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="page-box">
+                        <!--<a href="#" class="active">首页</a><a href="#">上一页</a><a href="#">下一页</a><a href="#">尾页</a>-->
+                        <div id="pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--添加银行卡-->
+<div class="main-modal-exist" id="add-bank">
+   <!-- <div class="main-modal-title clearfix">
+    <div class="main-modal-title-l">添加银行卡</div>
+    <div class="main-modal-title-r"><a href="#"><i class="icon-close" id="add-bank-close"></i> </a></div>
+    </div>-->
+    <div class="main-form main-modal-content">
+        <form>
+            <div class="main-form-item clearfix">
+                <label class="main-form-label">真实姓名:</label>
+                <div class="main-form-item-r" id="user-name"></div>
+            </div>
+            <!--<div class="main-form-item clearfix">
+            <label class="main-form-label">证件号码:</label>
+            <div class="main-form-item-r">430**********9878</div>
+            </div>-->
+            <div class="main-form-item clearfix">
+                <label class="main-form-label">银行卡号:</label>
+                <div class="main-form-item-r" id="bank-number-input">
+                    <input type="text" name="bankCard-number" class="main-form-input main-form-input3" onkeyup="this.value=this.value.replace(/\D/g,'').replace(/....(?!$)/g,'$& ')">
+                    <span></span>
+                </div>
+                <div class="form-tips">
+                    输入卡号后会智能识别银行和卡种，
+                    <a href="javascript:void(0)" class="bank-require">
+                        <span>银行卡要求</span>
+                        <div class="bank-claim">
+                            <div class="arrow-up"></div>
+                            填写以您自己姓名开户的银行卡，储蓄卡或信用卡均可。
+                            我们支持85家全国及地方银行，4家境外银行及卡组织。
+                            填写银行卡号后会自动判别，并告知此卡能否开通快捷支付。
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="main-form-item clearfix">
+                <label class="main-form-label">手机号码:</label>
+                <div class="main-form-item-r">
+                    <input type="text" name="phone-number" class="main-form-input main-form-input3">
+                    <span></span>
+                </div>
+                <div class="form-tips">请填写您在银行预留 的手机号码，以验证银行卡是否属于您本人</div>
+            </div>
+            <div class="button form-button"><a href="javascript:void(0)" id="add-bank-submit">提交</a></div>
+        </form>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/layui/layui.js"></script>
+<script src="../libs/ZeroClipboard/ZeroClipboard.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/userCenterHtml.js"></script>
+<script src="../js/userCenter/accountManage.js"></script>
+</body>
+</html>

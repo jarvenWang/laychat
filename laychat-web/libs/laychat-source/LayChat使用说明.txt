@@ -1,0 +1,35 @@
+LayChat目录说明：
+laychat-service为websocket服务，用于发送聊天消息。
+laychat-web为web服务，提供html界面，运行php web程序。
+laychat-web可以用nginx或者apache运行。
+laychat-web这里默认是用workerman运行的，如果用nginx运行，请将laychat-service/start_web.php中的代码注释掉
+。
+laychat-web目录不依赖任何外部文件。laychat-web目录可以部署在任何服务器。
+vendor目录是workerman框架目录，开发者不用关心，不要改动里面的代码。
+
+注意：
+1、laychat-web/static/upload 目录及子目录要有写权限，用于客户上传图片或者文件。
+2、数据库配置分别在laychat-web/Config下 和laychat-service/Config下
+3、数据库表结构在laychat.sql中，数据库名为laychat，需要手动创建
+4、需要安装pdo_mysql扩展，不然无法正常使用
+5、源码中使用了QQ第三方登录，如果想快速测试，可以本地配置host laychat.workerman.net.
+如果你的站点需要QQ第三方登录，需要到http://connect.qq.com/manage/index申请。
+申请后更改laychat-web/index.php
+<script type="text/javascript"
+        src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js"
+        data-appid="你的appid"
+        data-redirecturi="你的qq登录回调地址"//回调地址为源码中qq_login.php
+        charset="utf-8">
+</script>
+
+linux环境运行
+正式环境终端运行 php start.php start -d 启动。
+如果有问题可以php start.php start启动方便调试。
+
+
+LayIM手册：
+http://www.layui.com/doc/layim.html
+
+workerman手册：
+http://doc3.workerman.net/
+http://workerman.net/gatewaydoc/

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="window.setTimeout('window.close()',5000)">
+<h1 style="text-align: center;">页面将在 <span id="time-show">5</span> 秒后关闭！</h1>
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+var thisHref = window.location.href.split('?')[1];
+getData('set-email?'+thisHref,function(res){
+    console.log(res);
+    if(res.status==1){
+        var num=5;
+        var timer = setInterval(function(){
+            num--;
+            $('#time-show').html(num);
+        },1000);
+    }
+});
+
+
+</script>
+</body>
+</html>

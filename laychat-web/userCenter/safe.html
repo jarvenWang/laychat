@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心-安全中心</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+<!--左侧栏-->
+<div class="main-left-side">
+    <div class="main-l-hd">
+        <h1>个人中心</h1>
+
+        <p>CONTROL CENTER</p>
+    </div>
+    <div class="main-l-nav">
+        <ul>
+            <li><a  href="memberCenter.html"><i class="icon-user"></i> <span>会员中心</span> </a></li>
+            <li class="hasLSubNav">
+                <a href="accountManage.html"><i class="icon-money"></i> <span>资金管理 </span></a>
+            </li>
+            <li><a href="transactionDetails.html"><i class="icon-transaction"></i> <span>游戏报表</span></a></li>
+            <li><a href="news.html"><i class="icon-message"></i> <span>消息中心 </span></a></li>
+            <li><a href="../commonHtml/404.html"><i class="icon-bonus"></i><span> 我的红利</span></a></li>
+            <li><a href="userInfo.html"><i class="icon-userinfo"></i> <span>帐号信息</span> </a></li>
+            <li>
+                <a href="javascript:void(0)" class="main-l-nav-active"><i class="icon-safe"></i> <span>安全中心</span> </a>
+                <div class="main-l-nav-arr"></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--右侧主内容-->
+<div class="main-right-content">
+    <!--右侧header-->
+    <div class="main-r-hd clearfix"></div>
+    <!--右侧主要内容-->
+    <div class="main-r-bd">
+        <!--安全中心-->
+        <div class="safe-box clearfix">
+            <ul>
+                <li>
+                    <div class="safe-box-item">
+                        <div class="safe-ico safe-ico-bg1"><i class="icon-userinfo"></i></div>
+                        <div class="safe-info">
+                            <p>实名认证</p>
+                            <span>保户账户和资金安全</span>
+                            <div class="safe-state button safe-state-ok name-test-open">立即认证</div>
+                            <div class="safe-state button">已认证</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="safe-box-item">
+                        <div class="safe-ico safe-ico-bg2"><i class="icon-mobile"></i></div>
+                        <div class="safe-info">
+                            <p>手机绑定</p>
+                            <span>方便密码找回</span>
+                            <div class="safe-state button safe-state-ok phone-set-open">立即认证</div>
+                            <div class="safe-state button">已认证</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="safe-box-item">
+                        <div class="safe-ico safe-ico-bg3"><i class="icon-email"></i></div>
+                        <div class="safe-info">
+                            <p>邮箱认证</p>
+                            <span>密码找回 账户安全</span>
+                            <div class="safe-state button safe-state-ok mail-set-open">立即认证</div>
+                            <div class="safe-state button">已认证</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="safe-box-item">
+                        <div class="safe-ico safe-ico-bg4"><i class="icon-safe2"></i></div>
+                        <div class="safe-info">
+                            <p>安全问题</p>
+                            <span>提高帐户安全等级</span>
+                            <div class="safe-state button safe-state-ok safe-question-open">立即认证</div>
+                            <div class="safe-state button">已认证</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="safe-box-item">
+                        <div class="safe-ico safe-ico-bg5"><i class="icon-lock"></i></div>
+                        <div class="safe-info">
+                            <p>资金密码</p>
+                            <span>用于提现和支付</span>
+                            <div class="safe-state button safe-state-ok payword-set-open">立即认证</div>
+                            <div class="safe-state button safe-state-ok payword-change-open">立即修改</div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="safe-box-item">
+                        <div class="safe-ico safe-ico-bg6"><i class="icon-lock2"></i></div>
+                        <div class="safe-info">
+                            <p>登录密码</p>
+                            <span>确保安全登陆</span>
+                            <div class="safe-state button safe-state-ok logoin-change-open">立即修改</div>
+                            <div class="safe-state button safe-state-ok logoin-change-open">立即修改</div>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/userCenterHtml.js"></script>
+<script src="../js/userCenter/safe.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心- 消息中心</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+<!--左侧栏-->
+<div class="main-left-side">
+    <div class="main-l-hd">
+        <h1>个人中心</h1>
+
+        <p>CONTROL CENTER</p>
+    </div>
+    <div class="main-l-nav">
+        <ul>
+            <li>
+                <a  href="memberCenter.html"><i class="icon-user"></i> <span>会员中心</span> </a>
+            </li>
+            <li class="hasLSubNav">
+                <a href="accountManage.html"><i class="icon-money"></i> <span>资金管理 </span></a>
+            </li>
+            <li>
+                <a href="transactionDetails.html"><i class="icon-transaction"></i> <span>游戏报表</span></a>
+            </li>
+            <li>
+                <a href="javascript:void(0)" class="main-l-nav-active"><i class="icon-message"></i> <span>消息中心 </span></a>
+                <div class="main-l-nav-arr"></div>
+            </li>
+            <li><a href="../commonHtml/404.html"><i class="icon-bonus"></i><span> 我的红利</span></a></li>
+            <li><a href="userInfo.html"><i class="icon-userinfo"></i> <span>帐号信息</span> </a></li>
+            <li><a href="safe.html"><i class="icon-safe"></i> <span>安全中心</span> </a></li>
+        </ul>
+    </div>
+</div>
+
+<!--右侧主内容-->
+<div class="main-right-content">
+    <!--右侧header-->
+    <div class="main-r-hd clearfix"></div>
+    <!--右侧主要内容-->
+    <div class="main-r-bd">
+        <!--最新消息-->
+        <div class="main-r-box message-box">
+            <div class="sub-count-hd main-title">最新消息</div>
+            <div class="message-box-list">
+                <ul>
+                    <!--<li><span>[ 新闻 ]  </span> <span>FSL职业联赛常规赛收官战 WE榜首牙签收获MVP </span> <span>11/15</span></li>-->
+                </ul>
+                <div class="page-box">
+                    <div id="pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- JavaScript -->
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/userCenterHtml.js"></script>
+<script src="../js/userCenter/news.js"></script>
+</body>
+</html>

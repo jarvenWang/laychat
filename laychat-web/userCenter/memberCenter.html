@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心 </title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+<!--左侧栏-->
+<div class="main-left-side">
+    <div class="main-l-hd">
+        <h1>个人中心</h1>
+
+        <p>CONTROL CENTER</p>
+    </div>
+    <div class="main-l-nav">
+        <ul>
+            <li>
+                <a  href="javascript:void(0)" class="main-l-nav-active"><i class="icon-user"></i> <span>会员中心</span> </a>
+                <div class="main-l-nav-arr"></div>
+            </li>
+            <li class="hasLSubNav">
+                <a href="accountManage.html"><i class="icon-money"></i> <span>资金管理 </span></a>
+            </li>
+            <li><a href="transactionDetails.html"><i class="icon-transaction"></i> <span>游戏报表</span></a></li>
+            <li><a href="news.html"><i class="icon-message"></i> <span>消息中心 </span></a></li>
+            <li><a href="../commonHtml/404.html"><i class="icon-bonus"></i><span> 我的红利</span></a></li>
+            <li><a href="userInfo.html"><i class="icon-userinfo"></i> <span>帐号信息</span> </a></li>
+            <li><a href="safe.html"><i class="icon-safe"></i> <span>安全中心</span> </a></li>
+        </ul>
+    </div>
+</div>
+
+<!--右侧主内容-->
+<div class="main-right-content">
+    <!--右侧header-->
+    <div class="main-r-hd clearfix"></div>
+    <!--右侧主要内容-->
+    <div class="main-r-bd">
+        <!--统计-->
+        <div class="count-box clearfix">
+            <ul>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico total-ico"><i class="icon-money2"></i></div>
+                        <div class="count-info">
+                            <p>总账户</p>
+                            <span class="num-font">888,788.00</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico live-ico"><i class="icon-live"></i></div>
+                        <div class="count-info">
+                            <p>真人-本周输赢</p>
+                            <span class="num-font">888,788.00</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico sport-ico"><i class="icon-sport"></i></div>
+                        <div class="count-info">
+                            <p>体育-本周输赢</p>
+                            <span class="num-font">888,788.00</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico casino-ico"><i class="icon-casino"></i></div>
+                        <div class="count-info">
+                            <p>游戏-本周输赢</p>
+                            <span class="num-font">888,788.00</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="count-box-item">
+                        <div class="count-ico lottery-ico"><i class="icon-lottery"></i></div>
+                        <div class="count-info">
+                            <p>彩票-本周输赢</p>
+                            <span class="num-font">888,788.00</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--分平台统计-转换额度-->
+        <div class="sub-count main-r-box">
+            <div class="sub-count-hd">
+                <ul class="clearfix">
+                    <li>
+                        <div class="sub-count-title-l"> 主账户<span class="num-font user-balance"></span></div>
+                        <div class="button button-recharge"><a href="javascript:void(0)" class="goTo-recharge">充值</a></div>
+                    </li>
+                    <li>
+                        <div class="sub-count-title-l"> 提现金额<span class="num-font">￥0.00</span></div>
+                        <div class="button button-recharge"><a href="javascript:void(0)" class="goTo-withdraw">提现</a></div>
+                    </li>
+                    <li>
+                        <div class="sub-count-title-l">将游戏余额转入主账户</div>
+                        <div class="button button-recharge"><a href="javascript:void(0)">一键回收</a></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sub-count-container clearfix">
+                <ul>
+                    <li>
+                        <span>BS体育</span>
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)"  class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a  href="javascript:void(0)"  class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)"  class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)"  class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)"  class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a href="javascript:void(0)"  class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+                        <div class="update-money"><i class="icon-update"></i> <a href="javascript:void(0)">刷新额度</a></div>
+                        <div class="transform-button button"><a  href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                    <li>
+                        <span>BS体育</span>
+
+                        <div class=" num-font">￥6754.00</div>
+                        <div class="transform-button button"><a href="javascript:void(0)" class="fast-transfer-open">额度转换</a> </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--最新消息-->
+        <div class="main-r-box message-box message-box-mar">
+            <div class="sub-count-hd main-title">最新消息</div>
+            <div class="message-box-list">
+                <ul>
+                    <!--<li><span>[ 新闻 ]  </span> <span>FSL职业联赛常规赛收官战 WE榜首牙签收获MVP </span> <span>11/15</span></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--额度转换-->
+<div class="fast-modal-transfer transform-modal" style="display: none;">
+    <div class="main-form main-modal-content layui-form">
+        <div class="transform-box">
+            <div class="transform-box-l">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <select>
+                            <option value="0">中心账户0</option>
+                            <option value="1">中心账户1</option>
+                        </select>
+                    </div>
+                </div>
+                <h3>￥1688.00</h3>
+            </div>
+            <div class="transform-box-m"> 转至<h3><a href="javascript:void(0)"><i class="icon-transform"></i></a></h3></div>
+            <div class="transform-box-r">
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <select>
+                            <option value="0">游戏账户0</option>
+                            <option value="1">游戏账户1</option>
+                        </select>
+                    </div>
+                </div>
+                <h3>￥1688.00</h3>
+            </div>
+        </div>
+        <div class="main-form-item clearfix">
+            <label class="main-form-label">转账金额:</label>
+
+            <div class="main-form-item-r">
+                <input type="text" class="main-form-input main-form-input2" id="transfer-account" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')"
+                       placeholder="最低转账金额100元">
+                <span></span>
+            </div>
+        </div>
+        <div class="button form-button"><a href="javascript:void(0)" id="transfer-sure">确认转账</a></div>
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/userCenterHtml.js"></script>
+<script src="../js/userCenter/memberCenter.js"></script>
+</body>
+</html>

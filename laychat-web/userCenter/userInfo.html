@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>个人中心-帐号信息</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../libs/layui/css/layui.css">
+    <link rel="stylesheet" href="../css/user.css">
+    <link rel="stylesheet" href="../css/font.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link href="../favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+
+    <!-- In-document CSS -->
+</head>
+<body class="wrapper">
+
+<!--左侧栏-->
+<div class="main-left-side">
+    <div class="main-l-hd">
+        <h1>个人中心</h1>
+
+        <p>CONTROL CENTER</p>
+    </div>
+    <div class="main-l-nav">
+        <ul>
+            <li><a  href="memberCenter.html"><i class="icon-user"></i> <span>会员中心</span> </a></li>
+            <li class="hasLSubNav">
+                <a href="accountManage.html"><i class="icon-money"></i> <span>资金管理 </span></a>
+            </li>
+            <li><a href="transactionDetails.html"><i class="icon-transaction"></i> <span>游戏报表</span></a></li>
+            <li><a href="news.html"><i class="icon-message"></i> <span>消息中心 </span></a></li>
+            <li><a href="../commonHtml/404.html"><i class="icon-bonus"></i><span> 我的红利</span></a></li>
+            <li>
+                <a href="javascript:void(0)" class="main-l-nav-active"><i class="icon-userinfo"></i> <span>帐号信息</span> </a>
+                <div class="main-l-nav-arr"></div>
+            </li>
+            <li><a href="safe.html"><i class="icon-safe"></i> <span>安全中心</span> </a></li>
+        </ul>
+    </div>
+</div>
+
+<!--右侧主内容-->
+<div class="main-right-content">
+    <!--右侧header-->
+    <div class="main-r-hd clearfix"></div>
+    <!--右侧主要内容-->
+    <div class="main-r-bd">
+        <!--帐号信息-->
+        <div class="main-r-box">
+            <div class="user-info-list">
+                <ul>
+                    <li class="safeInfo-set">
+                        <div class="user-info-list-l">安全设置</div>
+                        <div class="user-info-list-m">
+                            <div>
+                                <span><a href="javascript:void(0)" class="phone-set-open"><i class="icon-mobile"></i>未认证 </a></span>
+                                <span><i class="icon-mobile"></i> 已认证</span>
+                            </div>
+                            <div>
+                                <span><a href="javascript:void(0)" class="mail-set-open"><i class="icon-email"></i>未认证 </a></span>
+                                <span><i class="icon-email"></i>已认证 </span>
+                            </div>
+                            <div>
+                                <span><a href="javascript:void(0)" class="name-test-open"><i class="icon-userinfo2"></i>未认证 </a></span>
+                                <span><i class="icon-userinfo2"></i>已认证 </span>
+                            </div>
+                        </div>
+                        <div class="user-info-list-r"><a href="javascript:void(0)" class="safeInfo-set-open">立即设置</a></div>
+                    </li>
+                    <li class="name-item">
+                        <div class="user-info-list-l">真实姓名</div>
+                        <div class="user-info-list-m">
+                            <span>暂未绑定</span>
+                            <span><em></em> 已认证</span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)" class="name-test-open">实名认证</a>
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </li>
+                    <li class="email-item">
+                        <div class="user-info-list-l">邮箱</div>
+                        <div class="user-info-list-m">
+                            <span>暂未绑定</span>
+                            <span></span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)" class="mail-set-open">绑定</a>
+                            <a href="javascript:void(0)" class="mail-change-open">修改</a>
+                        </div>
+                    </li>
+                    <li class="mobile-item">
+                        <div class="user-info-list-l">手机</div>
+                        <div class="user-info-list-m">
+                            <span>暂未绑定</span>
+                            <span></span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)" class="phone-set-open">绑定</a>
+                            <a href="javascript:void(0)" class="phone-delete-open">解绑</a>
+                        </div>
+                    </li>
+                    <li class="qq-item">
+                        <div class="user-info-list-l"> QQ号码</div>
+                        <div class="user-info-list-m">
+                            <span>暂未绑定</span>
+                            <span></span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)" class="QQ-set-open">绑定</a>
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </li>
+                    <li class="birthday-item">
+                        <div class="user-info-list-l"> 出生年月</div>
+                        <div class="user-info-list-m">
+                            <span>你还未设置生日，请先实名认证</span>
+                            <span><em></em>  可获取生日礼金</span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)"></a>
+                            <a href="javascript:void(0)"></a>
+                        </div>
+                    </li>
+                    <li class="login-item">
+                        <div class="user-info-list-l"> 登陆密码<i class="icon-lock2"></i></div>
+                        <div class="user-info-list-m">
+                            <span>登录账户时需要输入的密码</span>
+                            <span>登录账户时需要输入的密码</span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)" class="logoin-change-open">重置</a>
+                            <a href="javascript:void(0)" class="logoin-change-open">重置</a>
+                        </div>
+                    </li>
+                    <li class="payword-item">
+                        <div class="user-info-list-l"> 资金密码<i class="icon-lock"></i></div>
+                        <div class="user-info-list-m">
+                            <span>在账户资金变动，修改账户信息时需要输入的密码</span>
+                            <span>在账户资金变动，修改账户信息时需要输入的密码</span>
+                        </div>
+                        <div class="user-info-list-r">
+                            <a href="javascript:void(0)" class="payword-set-open">设置</a>
+                            <a href="javascript:void(0)" class="payword-change-open">重置</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JavaScript -->
+<script src="../libs/jquery/jquery.min.js"></script>
+<script src="../libs/layui/layui.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/userCenterHtml.js"></script>
+<script src="../js/userCenter/userInfo.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<div class="fast-modal-transfer-hd clearfix">
+    <div class="find-modal-close"><i class="icon-close close-fastModalTransfer"></i></div>
+    <div class="fast-transfer-l">
+        <h3>中心账户</h3>
+
+        <p>168888.00</p>
+    </div>
+    <div class="fast-transfer-r">
+        <h3>皇冠体育</h3>
+
+        <p>4561.00</p></div>
+    </div>
+<div class="fast-modal-transfer-bd clearfix">
+    <form>
+        <input type="text" placeholder="转入金额,最低100元" id="transfer-account" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+
+        <div class="transfer-button" style="display: none">
+            <a href="javascript:void(0)">转入并进入游戏</a>
+        </div>
+        <div class="transfer-button" style="display: none" id="transfer-wait">
+            <a href="javascript:void(0)"><i class="icon-payment"></i>
+            <span>转账中...</span></a>
+        </div>
+        <div class="transfer-button" id="game-enter">
+            <a href="javascript:void(0)"><i class="icon-check2"></i><span>进入游戏...</span></a>
+        </div>
+    </form>
+</div>
+<div class="fast-modal-transfer-ft clearfix">
+    <div class="play-button"><a href="javascript:void(0)" id="enterGame">直接进入游戏</a></div>
+</div>

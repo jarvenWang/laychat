@@ -1,0 +1,35 @@
+body{font: 12px/1.4 微软雅黑, Tahoma, 宋体;}
+.event-box {
+	background-color: #000000;
+	 background-image:url(../images/bg.jpg); background-repeat:no-repeat; background-position:center top;
+	position:relative;
+	padding-top:430px;
+	padding-bottom:30px;
+	color:#fff;
+	
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.cl {
+	clear: both;
+}
+.main-box{width:1060px; margin:0 auto;background-color:#031e30;padding:30px 30px 30px 10px;}
+.title-ico{background-image:url(../images/title-ico.png);width:100px;height:94px;}
+.ico1{background-position:left top;}
+.ico2{background-position:left -94px;}
+.ico3{background-position:left -188px;}
+.ico4{background-position:left -282px;}
+
+.main-title h1{font-size:40px; font-weight:bold; color:#fcff00; }
+.main-title p{color:#fff;font-size:24px; line-height:48px;}
+.title-text{padding-left:20px;padding-top:0px;}
+.main-content{padding:0px 0px 50px 122px;font-size:18px; line-height:36px;}
+.main-content h2{font-size:24px;}
+.main-table{padding:20px 0px;font-size:14px;}
+.main-table th{ background-color:#ffd200; border:1px solid #031e30;text-align:center;color:#6d0c0d;font-size:18px; line-height:36px;}
+.main-table td{background-color:#f59415; text-align:center;border:1px solid #031e30;color:#6d0c0d;font-size:14px;line-height:36px;}
+.time{padding:0px 15px; background-color:#042941;color:#ffd200;margin-top:10px;width:90%;border-radius: 3px;}
